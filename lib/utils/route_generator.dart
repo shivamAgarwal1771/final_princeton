@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:princeton_hive/presentation/layouts/batch_details.dart';
 import 'package:princeton_hive/presentation/layouts/check_batch.dart';
 import 'package:princeton_hive/presentation/layouts/create_activity_page.dart';
 import 'package:princeton_hive/presentation/layouts/create_profie_page.dart';
@@ -125,6 +126,10 @@ class RouteGenerator {
       case '/map_screen' :
         return MaterialPageRoute(
           builder: (_) => MapScreen(),
+        );
+        case '/batch_details' :
+        return MaterialPageRoute(
+          builder: (_) => BatchDetails(),
         );
       default:
         // If there is no such named route in the switch statement, e.g. /third

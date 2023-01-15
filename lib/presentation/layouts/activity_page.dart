@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:princeton_hive/presentation/elements/bottom_navbar.dart';
 
 class Activity extends StatefulWidget {
   const Activity({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class _ActivityState extends State<Activity> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: MyNavBar(),
       body: ListView(
         children: [
           Row(

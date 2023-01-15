@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:princeton_hive/presentation/elements/custom_scaffold.dart';
 
 class Batch extends StatefulWidget {
   const Batch({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class Batch extends StatefulWidget {
 class _BatchState extends State<Batch> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return CustomScaffold(
       body: ListView(
         children: [
           Row(
@@ -180,7 +181,7 @@ class _BatchState extends State<Batch> {
                     child: GestureDetector(
                       onTap: (){
                         Navigator.of(context).pushNamed(
-                          '/payment',
+                          '/batch_details',
                         );
                       },
                       child: Container(

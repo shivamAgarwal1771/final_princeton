@@ -40,6 +40,9 @@ class _MyNavBarState extends State<MyNavBar> {
             onPressed: () {
               setState(() {
                 pageIndex = 0;
+                Navigator.of(context).pushNamed(
+                    '/dashboard',
+                  );
               });
             },
             icon: pageIndex == 0
@@ -59,6 +62,9 @@ class _MyNavBarState extends State<MyNavBar> {
             onPressed: () {
               setState(() {
                 pageIndex = 1;
+                Navigator.of(context).pushNamed(
+                    '/activity',
+                  );
               });
             },
             icon: pageIndex == 1
@@ -78,6 +84,9 @@ class _MyNavBarState extends State<MyNavBar> {
             onPressed: () {
               setState(() {
                 pageIndex = 2;
+                Navigator.of(context).pushNamed(
+                    '/event_glim',
+                  );
               });
             },
             icon: pageIndex == 2
@@ -97,6 +106,9 @@ class _MyNavBarState extends State<MyNavBar> {
             onPressed: () {
               setState(() {
                 pageIndex = 3;
+                Navigator.of(context).pushNamed(
+                    '/map_screen',
+                  );
               });
             },
             icon: pageIndex == 3
