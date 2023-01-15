@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:princeton_hive/main.dart';
 import 'package:princeton_hive/presentation/layouts/batch_details.dart';
 import 'package:princeton_hive/presentation/layouts/check_batch.dart';
 import 'package:princeton_hive/presentation/layouts/create_activity_page.dart';
@@ -111,7 +112,7 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => Glim(),
         );
-      case '/mentor' :
+      case '/mentor_list' :
         return MaterialPageRoute(
           builder: (_) => Mentor(),
         );
@@ -130,6 +131,10 @@ class RouteGenerator {
         case '/batch_details' :
         return MaterialPageRoute(
           builder: (_) => BatchDetails(),
+        );
+        case '/camera_screen' :
+        return MaterialPageRoute(
+          builder: (_) => RecordingScreen(),
         );
       default:
         // If there is no such named route in the switch statement, e.g. /third

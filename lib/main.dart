@@ -4,7 +4,7 @@ import 'package:princeton_hive/presentation/layouts/journey_page.dart';
 import 'package:princeton_hive/utils/route_generator.dart';
 
 late List<CameraDescription> _cameras;
-Future<void> main() async{
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   _cameras = await availableCameras();
@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 // Recording screen code written here due to global variable issues
 class RecordingScreen extends StatefulWidget {
   const RecordingScreen({super.key});
@@ -38,7 +37,7 @@ class RecordingScreen extends StatefulWidget {
 
 class _RecordingScreenState extends State<RecordingScreen> {
   late CameraController controller;
- bool switchb =false;
+  bool switchb = false;
   @override
   void initState() {
     super.initState();
@@ -61,30 +60,44 @@ class _RecordingScreenState extends State<RecordingScreen> {
       }
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          body: Stack(children: [
-        CameraPreview(controller),
-        Padding(
-          padding: const EdgeInsets.only(top: 588, left: 158),
-          child: CircleAvatar(
-            backgroundColor: switchb==false?Colors.transparent:Color(0xFFD50000),
-            radius: 40,
-          ),
+        body: Stack(children: [
+      CameraPreview(controller),
+      Padding(
+        padding: const EdgeInsets.only(top: 593, left: 163),
+        child: CircleAvatar(
+          backgroundColor: switchb == false ? Colors.transparent : Colors.white,
+          radius: 35,
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 600, left: 170),
-          child: FloatingActionButton(
-              onPressed: () {
-                setState(() {
-                  if(switchb == false)
+      ),
+      Padding(
+        padding: const EdgeInsets.only(top: 600, left: 170),
+        child: FloatingActionButton(
+            onPressed: () {
+              setState(() {
+                if (switchb == false)
                   switchb = true;
-                  else
-                    switchb = false;
-                });
-              }, backgroundColor: switchb==false?Color(0xFFFF8A80):Color(0xFFFF8A80)),
-        )
-      ]));
+                else
+                  switchb = false;
+              });
+            },
+            backgroundColor: switchb == false ? Colors.red : Colors.redAccent),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(top: 720, left: 100),
+        child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xffFFC107), minimumSize: Size(200, 50)),
+            onPressed: () {
+               Navigator.of(context).pushNamed(
+                  '/result',
+                );
+            },
+            child: Text("Submit")),
+      )
+    ]));
   }
 }

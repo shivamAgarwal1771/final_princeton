@@ -27,6 +27,7 @@ class _MentorState extends State<Mentor> {
           SizedBox(
             height: MediaQuery.of(context).size.height*0.05,
           ),
+          //TextField(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 23),
             child: Container(
@@ -34,7 +35,7 @@ class _MentorState extends State<Mentor> {
               width:354,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(7.0),
-                color: Colors.grey,
+                color: Colors.grey.shade200,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

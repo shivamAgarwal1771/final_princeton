@@ -1,8 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:princeton_hive/presentation/layouts/signin_page.dart';
 
 class MyNavBar extends StatefulWidget {
@@ -15,12 +14,12 @@ class MyNavBar extends StatefulWidget {
 class _MyNavBarState extends State<MyNavBar> {
    int pageIndex = 0;
   
-  final pages = [
-    const SignInPage(),
-    const SignInPage(),
-    const SignInPage(),
-    const SignInPage(),
-  ];
+  // final pages = [
+  //   const SignInPage(),
+  //   const SignInPage(),
+  //   const SignInPage(),
+  //   const SignInPage(),
+  // ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -52,7 +51,7 @@ class _MyNavBarState extends State<MyNavBar> {
                     size: 35,
                   )
                 : const Icon(
-                    Icons.home_outlined,
+                    Icons.home_filled,
                     color: Colors.white,
                     size: 35,
                   ),
@@ -69,12 +68,12 @@ class _MyNavBarState extends State<MyNavBar> {
             },
             icon: pageIndex == 1
                 ? const Icon(
-                    Icons.edit,
+                    Icons.edit_note,
                     color: Colors.white,
                     size: 35,
                   )
                 : const Icon(
-                    Icons.edit_outlined,
+                    Icons.edit_note,
                     color: Colors.white,
                     size: 35,
                   ),
@@ -91,12 +90,12 @@ class _MyNavBarState extends State<MyNavBar> {
             },
             icon: pageIndex == 2
                 ? const Icon(
-                    Icons.calendar_month,
+                    Icons.event_available,
                     color: Colors.white,
                     size: 35,
                   )
                 : const Icon(
-                    Icons.calendar_month_outlined,
+                    Icons.event_available,
                     color: Colors.white,
                     size: 35,
                   ),
@@ -118,7 +117,7 @@ class _MyNavBarState extends State<MyNavBar> {
                     size: 35,
                   )
                 : const Icon(
-                    Icons.person_outline,
+                    Icons.person,
                     color: Colors.white,
                     size: 35,
                   ),

@@ -16,9 +16,16 @@ class _BatchDetailsState extends State<BatchDetails> {
     return Scaffold(
       body: ListView(
         children: [
+          Padding(
+            padding:  EdgeInsets.only(left: 16,top: 20),
+            child: Row(children: [
+              Icon(Icons.arrow_back)
+            ],),
+          ),
           Stack(
             
             children: [
+              
               Padding(
                 padding: const EdgeInsets.all(17),
                 child: SizedBox(

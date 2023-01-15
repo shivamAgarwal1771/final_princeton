@@ -38,9 +38,18 @@ class _MapScreen extends State<MapScreen> {
           initialCameraPosition: _KGooglePlex,
           markers: Set<Marker>.of(_marker),
         ),
-        
       ),
-      floatingActionButton: FloatingActionButton.extended(backgroundColor: Colors.amber,onPressed: (){}, label: Text("List Of Nearby Mentors ",style: TextStyle(color: Colors.black),)),
+      floatingActionButton: FloatingActionButton.extended(
+          backgroundColor: Colors.amber,
+          onPressed: () {
+            Navigator.of(context).pushNamed(
+                    '/mentor_list',
+                  );
+          },
+          label: Text(
+            "List Of Nearby Mentors ",
+            style: TextStyle(color: Colors.black),
+          )),
     );
   }
 }
