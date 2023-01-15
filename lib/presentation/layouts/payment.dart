@@ -201,7 +201,7 @@ class _PaymentState extends State<Payment> {
             child: GestureDetector(
               onTap: (){
                 Navigator.of(context).pushNamed(
-                  '/userLocation',
+                  '/map_screen',
                 );
               },
               child: Container(

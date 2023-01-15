@@ -122,9 +122,9 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => Payment(),
         );
-      case '/userLocation' :
+      case '/map_screen' :
         return MaterialPageRoute(
-          builder: (_) => UserCurrentLocation(),
+          builder: (_) => MapScreen(),
         );
       default:
         // If there is no such named route in the switch statement, e.g. /third
