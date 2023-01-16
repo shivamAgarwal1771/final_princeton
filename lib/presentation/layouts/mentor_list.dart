@@ -72,9 +72,7 @@ class _MentorState extends State<Mentor> {
             padding: const EdgeInsets.symmetric(horizontal: 19),
             child: GestureDetector(
               onTap: (){
-                Navigator.of(context).pushNamed(
-                  '/batch',
-                );
+                
               },
               child: Container(
                 height: 96,

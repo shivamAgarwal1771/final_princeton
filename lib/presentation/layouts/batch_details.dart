@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:princeton_hive/presentation/elements/join_now_card.dart';
 
 class BatchDetails extends StatefulWidget {
   const BatchDetails({Key? key}) : super(key: key);
@@ -14,6 +15,7 @@ class _BatchDetailsState extends State<BatchDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: JoinNow(),
       body: ListView(
         children: [
           Padding(

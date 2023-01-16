@@ -117,16 +117,7 @@ class SignInPage extends StatelessWidget {
                                   MediaQuery.of(context).size.height * 0.0167),
                         ),
                       ),
-                      FloatingActionButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const RecordingScreen()),
-                          );
-                        },
-                        child: Text("Test"),
-                      )
+                    
                     ],
                   ),
                 ),

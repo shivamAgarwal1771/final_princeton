@@ -199,11 +199,7 @@ class _PaymentState extends State<Payment> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: GestureDetector(
-              onTap: (){
-                Navigator.of(context).pushNamed(
-                  '/map_screen',
-                );
-              },
+              
               child: Container(
                 width: 359,
                 height: 63,

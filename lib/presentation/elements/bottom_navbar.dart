@@ -62,7 +62,7 @@ class _MyNavBarState extends State<MyNavBar> {
               setState(() {
                 pageIndex = 1;
                 Navigator.of(context).pushNamed(
-                    '/activity',
+                    '/create_activity',
                   );
               });
             },
