@@ -17,6 +17,7 @@ import 'package:princeton_hive/presentation/layouts/readliness_page.dart';
 import 'package:princeton_hive/presentation/layouts/signin_page.dart';
 import 'package:princeton_hive/presentation/layouts/journey_page.dart';
 import 'package:princeton_hive/presentation/layouts/splash_screen.dart';
+import 'package:princeton_hive/presentation/layouts/user_profile.dart';
 
 import '../presentation/layouts/activity_page.dart';
 import '../presentation/layouts/payment.dart';
@@ -135,6 +136,10 @@ class RouteGenerator {
         case '/camera_screen' :
         return MaterialPageRoute(
           builder: (_) => RecordingScreen(),
+        );
+        case '/user_profile' :
+        return MaterialPageRoute(
+          builder: (_) => ProfileMain(),
         );
       default:
         // If there is no such named route in the switch statement, e.g. /third
