@@ -32,9 +32,16 @@ class HowItWorks extends StatelessWidget {
                         color: Color(0xff4A164B), fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
-                      width: MediaQuery.of(context).size.width*0.13,
-                      child: Image.asset("assets/image/profile_img.png"))
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.of(context).pushNamed(
+                        '/user_profile',
+                      );
+                    },
+                    child: SizedBox(
+                        width: MediaQuery.of(context).size.width*0.13,
+                        child: Image.asset("assets/image/profile_img.png")),
+                  )
                 ],
               ),
               Text(
@@ -105,7 +112,7 @@ class HowItWorks extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pushNamed(
-                        '/create_activity',
+                        '/dashboard',
                       );
                     },
                     child: Text(

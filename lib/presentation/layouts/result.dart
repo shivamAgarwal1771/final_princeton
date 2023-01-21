@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:princeton_hive/presentation/elements/bottom_navbar.dart';
 
 class Result extends StatefulWidget {
   const Result({Key? key}) : super(key: key);
@@ -11,22 +12,32 @@ class _ResultState extends State<Result> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: MyNavBar(),
       body: ListView(
         children: [
+          SizedBox(height: 20,),
           Row(
             children: [
+              SizedBox(width: 10,),
               Icon(Icons.arrow_back),
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.613,
+                width: MediaQuery.of(context).size.width * 0.59,
               ),
               Text(
                 "Welcome, \n Priya",
                 style: TextStyle(
                     color: Color(0xff4A164B), fontWeight: FontWeight.bold),
               ),
-              SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.13,
-                  child: Image.asset("assets/image/profile_img.png"))
+              GestureDetector(
+                 onTap: (){
+                      Navigator.of(context).pushNamed(
+                        '/user_profile',
+                      );
+                    },
+                child: SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.13,
+                    child: Image.asset("assets/image/profile_img.png")),
+              )
             ],
           ),
           SizedBox(

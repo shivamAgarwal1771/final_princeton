@@ -34,9 +34,16 @@ class Dashboard extends StatelessWidget {
                           style: TextStyle(
                               color: Color(0xff4A164B), fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
-                            width: MediaQuery.of(context).size.width*0.13,
-                            child: Image.asset("assets/image/profile_img.png")),
+                        GestureDetector(
+                           onTap: (){
+                      Navigator.of(context).pushNamed(
+                        '/user_profile',
+                      );
+                    },
+                          child: SizedBox(
+                              width: MediaQuery.of(context).size.width*0.13,
+                              child: Image.asset("assets/image/profile_img.png")),
+                        ),
                       ],
                     ),
                     Text(

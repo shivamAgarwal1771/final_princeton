@@ -120,10 +120,10 @@ class _BatchDetailsState extends State<BatchDetails> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 26),
+            padding: const EdgeInsets.only(top: 20,bottom: 8),
             child: Container(
                 color: Colors.red.shade100,
-                height: 49,
+                height: 40,
                 width: 377,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 68),
