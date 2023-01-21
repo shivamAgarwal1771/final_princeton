@@ -21,7 +21,11 @@ class _BatchDetailsState extends State<BatchDetails> {
           Padding(
             padding:  EdgeInsets.only(left: 16,top: 20),
             child: Row(children: [
-              Icon(Icons.arrow_back)
+              GestureDetector(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child: Icon(Icons.arrow_back))
             ],),
           ),
           Stack(

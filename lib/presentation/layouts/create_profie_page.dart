@@ -8,6 +8,7 @@ class CreateProfile extends StatefulWidget {
 }
 
 class _CreateProfileState extends State<CreateProfile> {
+  List<String> hintTitles = ['Full Name','Date of Birth','Email','Password','Phone Number','Country','State','City','Pin Code','Select',];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -255,7 +256,7 @@ class _CreateProfileState extends State<CreateProfile> {
                                             hintStyle:
                                                 TextStyle(color: Colors.white),
                                             border: InputBorder.none,
-                                            hintText: "Username",
+                                            hintText: "Email",
                                           ),
                                         )),
                                   );

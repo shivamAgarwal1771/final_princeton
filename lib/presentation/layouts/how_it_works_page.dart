@@ -63,7 +63,7 @@ class HowItWorks extends StatelessWidget {
                     color: Color(0xff4A164B),
                     fontWeight: FontWeight.bold),
               ),
-              Image.asset("assets/image/profile_img.png"),
+              Image.asset("assets/image/record_yourself.PNG"),
               Text(
                 "Kindly upload your self introduction video.You need to make sure that your face is porperly visible and your audio pitch should be audible enough. The video length should be of atleast 30 seconds.",
                 style: TextStyle(fontSize: MediaQuery.of(context).size.height*0.0167, color: Color(0xff4A164B)),
@@ -75,7 +75,7 @@ class HowItWorks extends StatelessWidget {
                     color: Color(0xff4A164B),
                     fontWeight: FontWeight.bold),
               ),
-              Image.asset("assets/image/profile_img.png"),
+              Image.asset("assets/image/how_it_works.PNG"),
               Text(
                 "Your Comprehensive Report Result",
                 style: TextStyle(

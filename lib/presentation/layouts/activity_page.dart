@@ -62,7 +62,7 @@ class _ActivityState extends State<Activity> {
           GestureDetector(
             onTap: () {
               Navigator.of(context).pushNamed(
-                '/result',
+                '/camera_screen',
               );
             },
             child: Padding(

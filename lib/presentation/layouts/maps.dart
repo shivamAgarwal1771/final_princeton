@@ -36,6 +36,7 @@ class _MapScreen extends State<MapScreen> {
             _controller.complete(controller);
           },
           initialCameraPosition: _KGooglePlex,
+
           markers: Set<Marker>.of(_marker),
         ),
       ),

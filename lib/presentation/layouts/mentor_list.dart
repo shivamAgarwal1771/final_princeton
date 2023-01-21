@@ -100,7 +100,32 @@ class _MentorState extends State<Mentor> {
                   showDialog(
                       context: context,
                       builder: (BuildContext context) => AlertDialog(
-                            title: Text("Hello"),
+                            title: Column(
+                              children: [
+                                Image.asset("assets/image/mentor_img.png"),
+                                Text("Marcos Navas"),
+                                Text(
+                                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 1500s, when an unknown printer took a  printer took a",
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                                Row(
+                                  children: [
+                                    ElevatedButton(
+                                      style: ElevatedButton.styleFrom(backgroundColor: Color(0xffFFC107)),
+                                        onPressed: () {}, child: Text("Delhi",style: TextStyle(color: Colors.black),)),
+                                        SizedBox(width: 20,),
+                                        ElevatedButton(
+                                      style: ElevatedButton.styleFrom(backgroundColor: Color(0xffFFC107)),
+                                        onPressed: () {}, child: Text("English",style: TextStyle(color: Colors.black),)),
+                                        SizedBox(width: 16,),
+                                        ElevatedButton(
+                                      style: ElevatedButton.styleFrom(backgroundColor: Color(0xffFFC107)),
+                                        onPressed: () {}, child: Text("5+ years",style: TextStyle(color: Colors.black),)),
+                                        
+                                  ],
+                                )
+                              ],
+                            ),
                           ));
                 },
                 child: Container(
