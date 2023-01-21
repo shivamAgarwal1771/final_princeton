@@ -10,11 +10,17 @@ class LookingFor extends StatelessWidget {
     return CustomScaffold(
       body: Column(
         children: [
+          SizedBox(height: 20,),
           Row(
             children: [
-              Icon(Icons.arrow_back),
+              SizedBox(width: 10,),
+              GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back)),
               SizedBox(
-                width: MediaQuery.of(context).size.width*0.613,
+                width: MediaQuery.of(context).size.width*0.59,
               ),
               Text(
                 "Welcome, \n Priya",

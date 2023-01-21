@@ -13,11 +13,17 @@ class Readliness extends StatelessWidget {
       padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.019),
       child: Column(
         children: [
+          
           Row(
             children: [
-              Icon(Icons.arrow_back),
+              SizedBox(width: 10,),
+              GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back)),
               SizedBox(
-                width: MediaQuery.of(context).size.width*0.613,
+                width: MediaQuery.of(context).size.width*0.59,
               ),
               Text("Welcome, \n Priya",style: TextStyle(color: Color(0xff4A164B),fontWeight: FontWeight.bold),),
               SizedBox(

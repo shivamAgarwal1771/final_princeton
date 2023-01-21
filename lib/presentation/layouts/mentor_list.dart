@@ -20,7 +20,11 @@ class _MentorState extends State<Mentor> {
           SizedBox(
             width: 10,
           ),
-          Icon(Icons.arrow_back),
+          GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back)),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.59,
           ),
@@ -86,16 +90,18 @@ class _MentorState extends State<Mentor> {
         ),
       ),
       ListView.builder(
-        shrinkWrap: true,
+          shrinkWrap: true,
           itemCount: 3,
           itemBuilder: ((context, index) {
             return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 19,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 10),
               child: GestureDetector(
                 onTap: () {
-                  showDialog(context: context, builder: (BuildContext context) => AlertDialog(
-                    title: Text("Hello"),
-                  ));
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) => AlertDialog(
+                            title: Text("Hello"),
+                          ));
                 },
                 child: Container(
                   height: 96,

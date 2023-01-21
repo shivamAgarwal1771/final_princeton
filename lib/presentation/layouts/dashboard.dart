@@ -23,9 +23,14 @@ class Dashboard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    SizedBox(height: 20,),
                     Row(
                       children: [
-                        Icon(Icons.arrow_back),
+                        GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width*0.52,
                         ),

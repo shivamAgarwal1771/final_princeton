@@ -22,7 +22,11 @@ class HowItWorks extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(Icons.arrow_back),
+                  GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back)),
                   SizedBox(
                     width: MediaQuery.of(context).size.width*0.55,
                   ),

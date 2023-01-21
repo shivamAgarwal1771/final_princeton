@@ -18,7 +18,13 @@ class _CreateProfileState extends State<CreateProfile> {
           ),
           Row(
             children: [
-              Icon(Icons.arrow_back),
+              SizedBox(width: 10,),
+              GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back)),
+              SizedBox(width: 5,),
               Text(
                 "Create Your Profile",
                 style: TextStyle(
@@ -27,7 +33,7 @@ class _CreateProfileState extends State<CreateProfile> {
                     color: Color(0xff4A164B)),
               ),
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.265,
+                width: MediaQuery.of(context).size.width * 0.26,
               ),
               SizedBox(
                   height: MediaQuery.of(context).size.height * 0.048,
