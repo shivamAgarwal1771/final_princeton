@@ -219,6 +219,69 @@ class _CreateActivityState extends State<CreateActivity> {
                       }),
                 )),
           ),
+         Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: 14,
+                vertical: MediaQuery.of(context).size.height * 0.012),
+            child: Text("Set Frequency",
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: MediaQuery.of(context).size.height * 0.024,
+                    color: Color(0xff4A164B))),
+          ),
+           Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: 13,
+                vertical: MediaQuery.of(context).size.height * 0.018),
+            child: Container(
+                height: MediaQuery.of(context).size.height * 0.058,
+                width: MediaQuery.of(context).size.width * 0.53,
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black, //color of border
+                      width: 1, //width of border
+                    ),
+                    borderRadius: BorderRadius.circular(5)),
+                child: DropdownButtonHideUnderline(
+                  child: DropdownButton(
+                      value: selectedValue,
+                      alignment: Alignment.centerLeft,
+                      items: [
+                        DropdownMenuItem(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal:
+                                    MediaQuery.of(context).size.width * 0.318),
+                            child: Text("one"),
+                          ),
+                          value: 1,
+                        ),
+                        DropdownMenuItem(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal:
+                                    MediaQuery.of(context).size.width * 0.318),
+                            child: Text("two"),
+                          ),
+                          value: 2,
+                        ),
+                        DropdownMenuItem(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal:
+                                    MediaQuery.of(context).size.width * 0.318),
+                            child: Text("three"),
+                          ),
+                          value: 3,
+                        ),
+                      ],
+                      onChanged: (value) {
+                        setState(() {
+                          selectedValue = value!;
+                        });
+                      }),
+                )),
+          ),
           Padding(
             padding: const EdgeInsets.all(12),
             child: ElevatedButton(

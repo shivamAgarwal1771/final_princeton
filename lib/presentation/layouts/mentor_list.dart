@@ -112,15 +112,15 @@ class _MentorState extends State<Mentor> {
                                   children: [
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(backgroundColor: Color(0xffFFC107)),
-                                        onPressed: () {}, child: Text("Delhi",style: TextStyle(color: Colors.black),)),
-                                        SizedBox(width: 20,),
+                                        onPressed: () {}, child: Text("Book Now",style: TextStyle(color: Colors.black,fontSize: 12),)),
+                                        SizedBox(width: 12,),
                                         ElevatedButton(
                                       style: ElevatedButton.styleFrom(backgroundColor: Color(0xffFFC107)),
-                                        onPressed: () {}, child: Text("English",style: TextStyle(color: Colors.black),)),
-                                        SizedBox(width: 16,),
+                                        onPressed: () {}, child: Text("Calender",style: TextStyle(color: Colors.black,fontSize: 12),)),
+                                        SizedBox(width: 12,),
                                         ElevatedButton(
                                       style: ElevatedButton.styleFrom(backgroundColor: Color(0xffFFC107)),
-                                        onPressed: () {}, child: Text("5+ years",style: TextStyle(color: Colors.black),)),
+                                        onPressed: () {}, child: Text("Pay ",style: TextStyle(color: Colors.black,fontSize: 12),)),
                                         
                                   ],
                                 )

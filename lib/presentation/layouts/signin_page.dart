@@ -51,7 +51,7 @@ class SignInPage extends StatelessWidget {
                       ),
                       TextFormField(
                         decoration: InputDecoration(
-                            hintText: "Enter your mail ID",
+                            hintText: "Enter your Email ID",
                             filled: true,
                             fillColor: Colors.white,
                             enabledBorder: OutlineInputBorder(
@@ -93,7 +93,7 @@ class SignInPage extends StatelessWidget {
                               style: ElevatedButton.styleFrom(
                                   backgroundColor: Color(0xffFFC107)),
                               onPressed: () {
-                                Navigator.of(context).pushNamed('/profile');
+                                Navigator.of(context).pushNamed('/lookingfor');
                                 print(MediaQuery.of(context).size.width);
                               },
                               child: Text(

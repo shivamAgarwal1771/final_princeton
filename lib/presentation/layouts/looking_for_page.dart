@@ -51,13 +51,19 @@ class LookingFor extends StatelessWidget {
           SizedBox(
               width: MediaQuery.of(context).size.width*0.78,
               height: MediaQuery.of(context).size.height * 0.38,
-              child: Image.asset("assets/image/p_5.png")),
+              child: GestureDetector(
+                onTap:(){
+                   Navigator.of(context).pushNamed(
+                  '/lookingfor_2',
+                );
+                },
+                child: Image.asset("assets/image/p_5.png"))),
           ElevatedButton(
               style:
                   ElevatedButton.styleFrom(backgroundColor: Color(0xffFFC107)),
               onPressed: () {
                 Navigator.of(context).pushNamed(
-                  '/lookingfor_2',
+                  '/journey',
                 );
               },
               child: Icon(Icons.arrow_forward))

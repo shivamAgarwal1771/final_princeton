@@ -22,16 +22,18 @@ class JourneyPage extends StatelessWidget {
                     },
                     child: Icon(Icons.arrow_back)),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.59,
+                  width: MediaQuery.of(context).size.width * 0.7,
                 ),
-                Text(
-                  "Welcome, \n Priya",
-                  style: TextStyle(
-                      color: Color(0xff4A164B), fontWeight: FontWeight.bold),
-                ),
+                
                 SizedBox(
                     width: MediaQuery.of(context).size.width * 0.13,
-                    child: Image.asset("assets/image/profile_img.png"))
+                    child: GestureDetector(
+                      onTap: (){
+                         Navigator.of(context).pushNamed(
+                  '/how_it_works',
+                );
+                      },
+                      child: Image.asset("assets/image/bee.png")))
               ],
             ),
             SizedBox(
@@ -45,13 +47,13 @@ class JourneyPage extends StatelessWidget {
             ),
             Image.asset("assets/image/journey.png"),
             Image.asset("assets/image/journey_steps.png"),
-            Image.asset("assets/image/journey_video.png"),
+            //Image.asset("assets/image/journey_video.png"),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xffFFC107)),
                 onPressed: () {
                   Navigator.of(context).pushNamed(
-                    '/how_it_works',
+                    '/create_activity',
                   );
                 },
                 child: Icon(Icons.arrow_forward))

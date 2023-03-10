@@ -15,15 +15,19 @@ class _ActivityState extends State<Activity> {
       bottomNavigationBar: MyNavBar(),
       body: ListView(
         children: [
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           Row(
             children: [
-              SizedBox(width: 10,),
-             GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Icon(Icons.arrow_back)),
+              SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(Icons.arrow_back)),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.59,
               ),
@@ -33,11 +37,11 @@ class _ActivityState extends State<Activity> {
                     color: Color(0xff4A164B), fontWeight: FontWeight.bold),
               ),
               GestureDetector(
-                 onTap: (){
-                      Navigator.of(context).pushNamed(
-                        '/user_profile',
-                      );
-                    },
+                onTap: () {
+                  Navigator.of(context).pushNamed(
+                    '/user_profile',
+                  );
+                },
                 child: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.13,
                     child: Image.asset("assets/image/profile_img.png")),
@@ -68,7 +72,7 @@ class _ActivityState extends State<Activity> {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 17, vertical: 21),
               child: Container(
-                height: 154,
+                height: 202,
                 width: 343,
                 decoration: const BoxDecoration(
                   color: Color(0xFFffffff),
@@ -136,19 +140,27 @@ class _ActivityState extends State<Activity> {
                                 ),
                               )),
                         ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 100),
+                          child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Color(0xFFF0BC15)),
+                              onPressed: () {},
+                              child: Text("Start your Journey")),
+                        )
                       ],
                     ),
-                    Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 25),
-                        child: CircleAvatar(
-                          radius: 45,
-                          backgroundColor: Color(0xFF4A164B),
-                          child: Text(" 64%",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 36,
-                                  color: Color(0xFFFFFFFF))),
-                        ))
+                    // Padding(
+                    //     padding: EdgeInsets.symmetric(horizontal: 25),
+                    //     child: CircleAvatar(
+                    //       radius: 45,
+                    //       backgroundColor: Color(0xFF4A164B),
+                    //       child: Text(" 64%",
+                    //           style: TextStyle(
+                    //               fontWeight: FontWeight.w600,
+                    //               fontSize: 36,
+                    //               color: Color(0xFFFFFFFF))),
+                    //     ))
                   ],
                 ),
               ),

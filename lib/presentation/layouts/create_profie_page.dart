@@ -8,7 +8,18 @@ class CreateProfile extends StatefulWidget {
 }
 
 class _CreateProfileState extends State<CreateProfile> {
-  List<String> hintTitles = ['Full Name','Date of Birth','Email','Password','Phone Number','Country','State','City','Pin Code','Select',];
+  List<String> hintTitles = [
+    'Full Name',
+    'Date of Birth',
+    'Email',
+    'Password',
+    'Phone Number',
+    'Country',
+    'State',
+    'City',
+    'Pin Code',
+    'Select',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,13 +30,17 @@ class _CreateProfileState extends State<CreateProfile> {
           ),
           Row(
             children: [
-              SizedBox(width: 10,),
+              SizedBox(
+                width: 10,
+              ),
               GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Icon(Icons.arrow_back)),
-              SizedBox(width: 5,),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(Icons.arrow_back)),
+              SizedBox(
+                width: 5,
+              ),
               Text(
                 "Create Your Profile",
                 style: TextStyle(
@@ -119,7 +134,9 @@ class _CreateProfileState extends State<CreateProfile> {
                             : position == 13
                                 ? Padding(
                                     padding: EdgeInsets.symmetric(
-                                        horizontal: MediaQuery.of(context).size.width*0.027,
+                                        horizontal:
+                                            MediaQuery.of(context).size.width *
+                                                0.027,
                                         vertical:
                                             MediaQuery.of(context).size.height *
                                                 0.019),
@@ -135,7 +152,11 @@ class _CreateProfileState extends State<CreateProfile> {
                                             ),
                                             Padding(
                                               padding: EdgeInsets.symmetric(
-                                                  horizontal: MediaQuery.of(context).size.width*0.04,
+                                                  horizontal:
+                                                      MediaQuery.of(context)
+                                                              .size
+                                                              .width *
+                                                          0.04,
                                                   vertical:
                                                       MediaQuery.of(context)
                                                               .size
@@ -145,7 +166,10 @@ class _CreateProfileState extends State<CreateProfile> {
                                                   child: Align(
                                                 alignment: Alignment.center,
                                                 child: Container(
-                                                  width: MediaQuery.of(context).size.width*0.78,
+                                                  width: MediaQuery.of(context)
+                                                          .size
+                                                          .width *
+                                                      0.78,
                                                   height: MediaQuery.of(context)
                                                           .size
                                                           .height *
@@ -180,14 +204,21 @@ class _CreateProfileState extends State<CreateProfile> {
                                             ),
                                             Padding(
                                               padding: EdgeInsets.symmetric(
-                                                  horizontal: MediaQuery.of(context).size.width*0.04,
+                                                  horizontal:
+                                                      MediaQuery.of(context)
+                                                              .size
+                                                              .width *
+                                                          0.04,
                                                   vertical:
                                                       MediaQuery.of(context)
                                                               .size
                                                               .height *
                                                           0.01),
                                               child: Container(
-                                                width: MediaQuery.of(context).size.width*0.78,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.78,
                                                 height: MediaQuery.of(context)
                                                         .size
                                                         .height *
@@ -222,7 +253,11 @@ class _CreateProfileState extends State<CreateProfile> {
                                               },
                                               child: Padding(
                                                 padding: EdgeInsets.symmetric(
-                                                    horizontal: MediaQuery.of(context).size.width*0.212,
+                                                    horizontal:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .width *
+                                                            0.212,
                                                     vertical:
                                                         MediaQuery.of(context)
                                                                 .size
